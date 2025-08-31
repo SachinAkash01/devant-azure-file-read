@@ -27,7 +27,7 @@ public function main() returns error? {
 // --- Stream-read and print lines ---
 function streamAzureFileLinesSizeAgnostic(azure_files:FileClient fileClient, string share, string name, string? dir, int maxLines = -1 ) returns error? {
     final regexp:RegExp lineBreak = re `\r?\n`;
-    final regexp:RegExp NL        = re `\n`;
+    final regexp:RegExp NL = re `\n`;
 
     int offset = 0;
     string carry = "";
